@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-nativestorage"
-    version="2.3.2">
+    id="cordova-plugin-mz-nativestorage"
+    version="2.3.4">
     <name>NativeStorage</name>
     <description>Native storage of variables in Android and iOS</description>
     <license>Apache 2.0</license>
@@ -11,7 +11,7 @@
     <issue></issue>
 
     <js-module src="www/mainHandle.js" name="mainHandle">
-        <clobbers target="NativeStorage" />
+        <clobbers target="window.nativeStorage" />
     </js-module>
     <js-module src="www/LocalStorageHandle.js" name="LocalStorageHandle">
     </js-module>
@@ -39,6 +39,7 @@
         </config-file>
         <header-file src="src/ios/NativeStorage.h"/>
         <source-file src="src/ios/NativeStorage.m"/>
+        <resource-file src="src/ios/NativeStorage.bundle" target="NativeStorage.bundle" />
     </platform>
 
     <!-- Browser -->
